@@ -12,7 +12,7 @@ def main():
 	print(f"Screen height: {SCREEN_HEIGHT}")
 
 	while True:
-		pygame.screen.fill(color=black)
+		pygame.Surface.fill(color=black)
 
 
 		pygame.display.flip()
