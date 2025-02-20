@@ -6,15 +6,15 @@ from constants import *
 
 def main():
 	pygame.init()
-	display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+	pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 	print("Starting Asteroids!")
 	print(f"Screen width: {SCREEN_WIDTH}")
 	print(f"Screen height: {SCREEN_HEIGHT}")
 
 	while True:
-		screen.fill(color=black)
+		pygame.screen.fill(color=black)
 
 
-		display.flip()
+		pygame.display.flip()
 if __name__ == "__main__":
 	main()
