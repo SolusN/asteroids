@@ -13,20 +13,19 @@ def main():
 
 	clock = pygame.time.Clock()
 	dt = 0
-	while True:
-		print("start of loop")
-		print("dt=clock.tick")
-		dt = clock.tick(60) / 1000 # an error here somewhere
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				return
-		print("before screen.fill")
-		screen.fill((0,0,0))
-		print("after screen.fill")
+	try:
+		while True:
+			dt = clock.tick(60) / 1000 # an error here somewhere
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					return
+			screen.fill((0,0,0))
+			
+			pygame.display.update()
+	except KeyboardInterrupt:
+		print("Game loop interrupted. Quitting...")
+	finally:
+		pygame.quit()
 		
-		print("before display.flip")
-		pygame.display.update()
-		print("after display.flip")
-		print("end of loop")
 if __name__ == "__main__":
 	main()
