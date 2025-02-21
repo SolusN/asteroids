@@ -21,7 +21,7 @@ def main():
 		pygame.Surface.fill(screen,(0,0,0))
 
 
-		dt = clock.tick(60) / 1000 # an error here somewhere
 		pygame.display.flip()
+		dt = clock.tick(60) / 1000 # an error here somewhere
 if __name__ == "__main__":
 	main()
