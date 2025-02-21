@@ -15,6 +15,8 @@ def main():
 	dt = 0
 	while True:
 		print("start of loop")
+		print("dt=clock.tick")
+		dt = clock.tick(60) / 1000 # an error here somewhere
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				return
@@ -25,8 +27,6 @@ def main():
 		print("before display.flip")
 		pygame.display.flip()
 		print("after display.flip")
-		print("dt=clock.tick")
-		dt = clock.tick(60) / 1000 # an error here somewhere
 		print("end of loop")
 if __name__ == "__main__":
 	main()
