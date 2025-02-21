@@ -16,6 +16,8 @@ def main():
 	print(screen)
 	print(type(screen))
 	while True:
+		
+		dt = clock.tick(60) / 1000 # an error here somewhere
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				return
@@ -23,7 +25,6 @@ def main():
 		screen.fill((0,0,0))
 		
 
-		# pygame.display.flip()
-		dt = clock.tick(60) / 1000 # an error here somewhere
+		pygame.display.flip()
 if __name__ == "__main__":
 	main()
