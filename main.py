@@ -25,7 +25,7 @@ def main():
 		print("after screen.fill")
 		
 		print("before display.flip")
-		pygame.display.flip()
+		pygame.display.update()
 		print("after display.flip")
 		print("end of loop")
 if __name__ == "__main__":
