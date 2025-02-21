@@ -19,7 +19,9 @@ def main():
 			if event.type == pygame.QUIT:
 				return
 		pygame.Surface.fill(screen,(0,0,0))
-
+		print(clock)
+		print(type(clock))
+		
 
 		pygame.display.flip()
 		dt = clock.tick(60) / 1000 # an error here somewhere
