@@ -13,18 +13,20 @@ def main():
 
 	clock = pygame.time.Clock()
 	dt = 0
-	print(screen)
-	print(type(screen))
 	while True:
-		
-		dt = clock.tick(60) / 1000 # an error here somewhere
+		print("start of loop")
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				return
-		
+		print("before screen.fill")
 		screen.fill((0,0,0))
+		print("after screen.fill")
 		
-
+		print("before display.flip")
 		pygame.display.flip()
+		print("after display.flip")
+		print("dt=clock.tick")
+		dt = clock.tick(60) / 1000 # an error here somewhere
+		print("end of loop")
 if __name__ == "__main__":
 	main()
