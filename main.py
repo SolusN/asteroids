@@ -14,9 +14,14 @@ def main():
 
 	my_player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
-
 	clock = pygame.time.Clock()
 	dt = 0
+
+	updatable = pygame.sprite.Group()
+	drawable = pygame.sprite.Group()
+
+	my_player.containers = (updatable, drawable)
+
 	try:
 		while True:
 			dt = clock.tick(60) / 1000 # an error here somewhere
@@ -24,8 +29,8 @@ def main():
 				if event.type == pygame.QUIT:
 					return
 			screen.fill((0,0,0))
-			my_player.update(dt)
-			my_player.draw(screen)
+			updatable.update(dt)
+			drawable.draw(screen)
 			pygame.display.update()
 	except KeyboardInterrupt:
 		print("Game loop interrupted. Quitting...")
