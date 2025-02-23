@@ -12,7 +12,7 @@ def main():
 	print(f"Screen width: {SCREEN_WIDTH}")
 	print(f"Screen height: {SCREEN_HEIGHT}")
 
-	my_player = player.Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
+	my_player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
 
 	clock = pygame.time.Clock()
