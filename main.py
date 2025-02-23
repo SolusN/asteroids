@@ -2,6 +2,7 @@
 # the open-source pygame library
 # throughout this file
 import pygame
+import player
 from constants import *
 
 def main():
