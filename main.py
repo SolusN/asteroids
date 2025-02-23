@@ -2,7 +2,7 @@
 # the open-source pygame library
 # throughout this file
 import pygame
-import player
+from player import Player
 from constants import *
 
 def main():
@@ -25,7 +25,7 @@ def main():
 					return
 			screen.fill((0,0,0))
 			
-			player.draw(screen)
+			my_player.draw(screen)
 			pygame.display.update()
 	except KeyboardInterrupt:
 		print("Game loop interrupted. Quitting...")
