@@ -39,9 +39,9 @@ def main():
 			screen.fill((0,0,0))
 			updatable.update(dt)
 			for ast in asteroid_container:
-			    if ast.check_collision(my_player):
-				print("Game OVER!")
-				pygame.quit()
+				if ast.check_collision(my_player):
+					print("Game OVER!")
+					pygame.quit()
 			for sprite in drawable:
 				sprite.draw(screen)
 			pygame.display.update()
