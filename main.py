@@ -45,6 +45,11 @@ def main():
 				if ast.check_collision(my_player):
 					print("Game OVER!")
 					pygame.quit()
+				for sht in shots_fired:
+					if sht.check_collision(ast):
+						ast.kill()
+						sht.kill()
+						
 			for sprite in drawable:
 				sprite.draw(screen)
 			pygame.display.update()
