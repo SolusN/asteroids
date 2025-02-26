@@ -46,10 +46,11 @@ def main():
 					print("Game OVER!")
 					pygame.quit()
 				for sht in shots_fired:
-					if sht.check_collision(ast):
+					if ast.check_collision(sht):
 						ast.kill()
 						sht.kill()
 						
+
 			for sprite in drawable:
 				sprite.draw(screen)
 			pygame.display.update()
