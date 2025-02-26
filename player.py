@@ -29,8 +29,6 @@ class Player(CircleShape):
         self.position += forward * constants.PLAYER_MOVE_SPEED * dt
 
     def shoot(self, position, dt):
-        if self.shoot_cooldown > 0:
-            return 0
         x = position.x
         y = position.y
         _shot = Shot(x, y, constants.SHOT_RADIUS)
@@ -51,6 +49,8 @@ class Player(CircleShape):
             self.rotate(dt)
 
         if keys[pygame.K_SPACE]:
-            self.shoot(self.position, dt)
-
+            if self.shoot_cooldown < 0:
+                self.shoot(self.position, dt)
+            else:
+                return
         
