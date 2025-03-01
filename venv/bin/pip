@@ -1,4 +1,4 @@
-#!/home/solusn/asteroids/venv/bin/python3.10
+#!/home/solusn/asteroids/venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys

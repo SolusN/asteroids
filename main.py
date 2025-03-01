@@ -47,7 +47,7 @@ def main():
 					pygame.quit()
 				for sht in shots_fired:
 					if ast.check_collision(sht):
-						ast.kill()
+						ast.split()
 						sht.kill()
 						
 
