@@ -37,7 +37,7 @@ def main():
 			for event in pygame.event.get():
 				if event.type == pygame.QUIT:
 					return
-			screen.fill((0,0,0))
+			screen.fill((20,20,20))
 			updatable.update(dt)
 			for ast in asteroid_container:
 				if ast.check_collision(my_player):
